@@ -42,12 +42,12 @@
                 <ref bean="blMenuProcessor"/>                      
             </set>
         </property>
-    </bean> -->
+    </bean>
     
     <bean class="org.broadleafcommerce.common.extensibility.context.merge.LateStageMergeBeanPostProcessor">
         <property name="collectionRef" value="blDialectMenuProcessors" />
         <property name="targetRef" value="blDialectProcessors" />
-    </bean>    
+    </bean> -->    
 
 
     <!--  Add New TranslatedEntity Types -->
