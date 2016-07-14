@@ -35,14 +35,14 @@
         <context:exclude-filter type="regex" expression="org.broadleafcommerce.menu.admin.*"/>
     </context:component-scan>
     
-    <!-- Thymeleaf Config -->
+<!--     Thymeleaf Config
     <bean id="blDialectMenuProcessors" class="org.springframework.beans.factory.config.SetFactoryBean">
         <property name="sourceSet">
             <set>
                 <ref bean="blMenuProcessor"/>                      
             </set>
         </property>
-    </bean>
+    </bean> -->
     
     <bean class="org.broadleafcommerce.common.extensibility.context.merge.LateStageMergeBeanPostProcessor">
         <property name="collectionRef" value="blDialectMenuProcessors" />
