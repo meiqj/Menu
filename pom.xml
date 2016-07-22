@@ -14,7 +14,7 @@
     <version>2.0.2-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <blc.version>5.0.0-GA</blc.version>
+        <blc.version>5.0.3-SNAPSHOT</blc.version>
         <project.uri>${project.baseUri}</project.uri>
         <attachSources>false</attachSources>
     </properties>
@@ -121,7 +121,16 @@
             <type>jar</type>
             <optional>true</optional>
         </dependency>
-
+        <dependency>
+            <groupId>org.broadleafcommerce</groupId>
+            <artifactId>broadleaf-framework-thymeleaf</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.broadleafcommerce</groupId>
+            <artifactId>broadleaf-contentmanagement-thymeleaf</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-contentmanagement-module</artifactId>
