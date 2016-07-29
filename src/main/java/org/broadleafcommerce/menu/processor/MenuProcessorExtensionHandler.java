@@ -20,7 +20,7 @@ package org.broadleafcommerce.menu.processor;
 
 import org.broadleafcommerce.common.extension.ExtensionHandler;
 import org.broadleafcommerce.common.extension.ExtensionResultStatusType;
-import org.thymeleaf.context.ITemplateContext;
+import org.broadleafcommerce.common.web.domain.BroadleafThymeleafContext;
 
 import java.util.Map;
 
@@ -34,6 +34,6 @@ public interface MenuProcessorExtensionHandler extends ExtensionHandler {
      *
      * @return - ExtensionResultStatusType
      */
-    public ExtensionResultStatusType addAdditionalFieldsToModel(String tagName, Map<String, String> tagAttributes, Map<String, Object> newModelVars, ITemplateContext context);
+    public ExtensionResultStatusType addAdditionalFieldsToModel(String tagName, Map<String, String> tagAttributes, Map<String, Object> newModelVars, BroadleafThymeleafContext context);
 
 }
