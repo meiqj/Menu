@@ -18,7 +18,7 @@
 
 package org.broadleafcommerce.menu.processor;
 
-import org.broadleafcommerce.common.web.dialect.AbstractModelVariableModifierProcessor;
+import org.broadleafcommerce.common.web.dialect.AbstractBroadleafModelVariableModifierProcessor;
 import org.broadleafcommerce.common.web.domain.BroadleafThymeleafContext;
 import org.broadleafcommerce.menu.domain.Menu;
 import org.broadleafcommerce.menu.service.MenuService;
@@ -38,7 +38,7 @@ import javax.annotation.Resource;
  * @author bpolster
  */
 @Component("blMenuProcessor")
-public class MenuProcessor extends AbstractModelVariableModifierProcessor {
+public class MenuProcessor extends AbstractBroadleafModelVariableModifierProcessor {
 
     @Resource(name = "blMenuService")
     protected MenuService menuService;
@@ -46,15 +46,18 @@ public class MenuProcessor extends AbstractModelVariableModifierProcessor {
     @Resource(name = "blMenuProcessorExtensionManager")
     protected MenuProcessorExtensionManager extensionManager;
 
-    /**
-     * Sets the name of this processor to be used in Thymeleaf template
-     */
-    public MenuProcessor() {
-        super("menu", 1000);
+    @Override
+    public String getName() {
+        return "menu";
+    }
+    
+    @Override
+    public int getPrecedence() {
+        return 1000;
     }
 
     @Override
-    protected void populateModelVariables(String tagName, Map<String, String> tagAttributes, Map<String, Object> newModelVars, BroadleafThymeleafContext context) {
+    public void populateModelVariables(String tagName, Map<String, String> tagAttributes, Map<String, Object> newModelVars, BroadleafThymeleafContext context) {
         String resultVar = tagAttributes.get("resultVar");
         String menuName = tagAttributes.get("menuName");
         String menuId = tagAttributes.get("menuId");
