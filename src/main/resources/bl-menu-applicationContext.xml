@@ -36,7 +36,7 @@
     </context:component-scan>
     
     <!-- Thymeleaf Config -->
-    <bean id="blDialectMenuProcessors" class="org.springframework.beans.factory.config.SetFactoryBean">
+<!--     <bean id="blDialectMenuProcessors" class="org.springframework.beans.factory.config.SetFactoryBean">
         <property name="sourceSet">
             <set>
                 <ref bean="blMenuProcessor"/>                      
@@ -47,7 +47,7 @@
     <bean class="org.broadleafcommerce.common.extensibility.context.merge.LateStageMergeBeanPostProcessor">
         <property name="collectionRef" value="blDialectMenuProcessors" />
         <property name="targetRef" value="blDialectProcessors" />
-    </bean>    
+    </bean> -->    
 
 
     <!--  Add New TranslatedEntity Types -->
