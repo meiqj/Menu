@@ -19,7 +19,7 @@
 package org.broadleafcommerce.menu.processor;
 
 import org.broadleafcommerce.common.web.dialect.AbstractBroadleafModelVariableModifierProcessor;
-import org.broadleafcommerce.common.web.domain.BroadleafThymeleafContext;
+import org.broadleafcommerce.common.web.domain.BroadleafTemplateContext;
 import org.broadleafcommerce.menu.domain.Menu;
 import org.broadleafcommerce.menu.service.MenuService;
 import org.springframework.stereotype.Component;
@@ -57,7 +57,7 @@ public class MenuProcessor extends AbstractBroadleafModelVariableModifierProcess
     }
 
     @Override
-    public void populateModelVariables(String tagName, Map<String, String> tagAttributes, Map<String, Object> newModelVars, BroadleafThymeleafContext context) {
+    public void populateModelVariables(String tagName, Map<String, String> tagAttributes, Map<String, Object> newModelVars, BroadleafTemplateContext context) {
         String resultVar = tagAttributes.get("resultVar");
         String menuName = tagAttributes.get("menuName");
         String menuId = tagAttributes.get("menuId");
